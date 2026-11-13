@@ -40,7 +40,10 @@ jobs:
           restore-keys: buildozer-
 
       - name: Compila APK (debug)
-        run: buildozer android debug
+        run: |
+          unset ANDROID_HOME
+          unset ANDROID_SDK_ROOT
+          buildozer android debug
 
       - name: Faz upload do APK
         uses: actions/upload-artifact@v4
