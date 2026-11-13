@@ -40,7 +40,6 @@ jobs:
           restore-keys: buildozer-
 
       - name: Compila APK (debug)
-        working-directory: decompression_calc
         run: buildozer android debug
 
       - name: Faz upload do APK
